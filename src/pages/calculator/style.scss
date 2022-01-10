@@ -1,0 +1,53 @@
+@import "../../assets/styles/mixins";
+
+.calculator {
+  @include maxWidth(464px);
+  min-height: 480px;
+  background-color: rgb(29, 29, 29);
+  padding: 32px;
+}
+
+.area {
+  margin-bottom: 16px;
+
+  input {
+    color: #ffffff;
+    text-align: right;
+    background-color: transparent;
+    border: none;
+    caret-color: #ffffff;
+    @include font(24px, 600, 'arial-bold');
+    width: 100%;
+
+    &:focus-visible {
+      border: none;
+      outline: unset;
+    }
+  }
+
+  p {
+    color: #cecdcd;
+    text-align: right;
+    @include font(16px, 400, 'arial');
+    margin-top: 12px;
+  }
+}
+
+.calc-items {
+  margin: -8px;
+}
+
+.button {
+  color: #ffffff;
+  @include font(16px, 600, 'arial-bold');
+  @include wh(80px, 80px);
+  background-color: #323333;
+  border-radius: 50%;
+  margin: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.signs .button {
+  color: aqua;
+}
